@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pixso HTML</title>
+  <link rel="stylesheet" href="css/font.css">
+  <script src="js/animation.js"></script>
+  <style>
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+ol,ul,menu {
+  padding-inline-start: 0;
+  list-style: none;
+}
+
+ol li::marker, ul li::before {
+  letter-spacing: 0;
+}
+
+.scroll-container > div {
+  width: 100%;
+}
+
+.container > div {
+  width: 100%;
+}
+
+.Pixso-canvas-0_1 > div {
+  width: 100%;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body { 
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  background-color: white;
+}
+    
+span {
+  word-break: break-word;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+}
+
+.scroll-container {
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+}
+
+.Pixso-canvas-0_1 {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.Pixso-symbol-4_36 {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 0px 12px 12px;
+  background-color: transparent;
+}
+
+.stroke-wrapper-4_36 {
+  position: relative;
+  width: 100%;
+  height: 504px;
+  display: flex;
+  flex-shrink: 0;
+}
+
+.stroke-4_36 {
+  position: absolute;
+  inset: -0.5px -0.5px -0.5px -0.5px;
+  border-radius: 0px 0px 0px 0px;
+  pointer-events: none;
+  border-width: 1px 1px 1px 1px;
+  border-style: solid;
+  box-sizing: border-box;
+  border-color: rgba(0, 0, 0, 1);
+}
+
+.Pixso-group-4_22 {
+  width: 96.97%;
+  height: 20.59%;
+  position: absolute;
+  left: 1.38%;
+  right: 1.65%;
+  top: 2.38%;
+  bottom: 77.03%;
+}
+
+.Pixso-frame-4_37 {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0%;
+  right: 0%;
+  top: 0%;
+  bottom: 0%;
+  background-color: rgba(253, 121, 226, 1);
+  mix-blend-mode: normal;
+}
+
+.shadow-blend-4_37-0 {
+  position: absolute;
+  inset: 0;
+  box-shadow: -7px -7px 4px 0px rgba(0, 0, 0, 0.25) inset;
+  pointer-events: none;
+  mix-blend-mode: normal;
+}
+
+.shadow-blend-4_37-1 {
+  position: absolute;
+  inset: 0;
+  box-shadow: 7px 7px 7px 0px rgba(0, 0, 0, 0.2600000119676777) inset;
+  pointer-events: none;
+  mix-blend-mode: normal;
+}
+
+.Pixso-paragraph-5_1 {
+  font-size: 48px;
+  font-family: "Inconsolata-Regular";
+  font-weight: 400;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  letter-spacing: 0px;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 1);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0%;
+  right: 0%;
+  top: 0%;
+  bottom: 0%;
+  mix-blend-mode: normal;
+}
+
+.Pixso-group-4_21 {
+  width: 96.95%;
+  height: 16.24%;
+  position: absolute;
+  left: 1.38%;
+  right: 1.67%;
+  top: 26.93%;
+  bottom: 56.83%;
+}
+
+.Pixso-frame-4_52 {
+  width: 49.96%;
+  height: 100%;
+  position: absolute;
+  left: 0%;
+  right: 50.04%;
+  top: 0%;
+  bottom: 0%;
+  background-color: rgba(253, 121, 226, 1);
+}
+
+.shadow-blend-4_52-0 {
+  position: absolute;
+  inset: 0;
+  box-shadow: -7px -7px 4px 0px rgba(0, 0, 0, 0.25) inset;
+  pointer-events: none;
+  mix-blend-mode: normal;
+}
+
+.shadow-blend-4_52-1 {
+  position: absolute;
+  inset: 0;
+  box-shadow: 7px 7px 7px 0px rgba(0, 0, 0, 0.25) inset;
+  pointer-events: none;
+  mix-blend-mode: normal;
+}
+
+.Pixso-paragraph-4_8 {
+  font-size: 24px;
+  font-family: "Inconsolata-Regular";
+  font-weight: 400;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: rgba(255, 255, 255, 1);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0%;
+  right: 0%;
+  top: 0%;
+  bottom: 0%;
+}
+
+.Pixso-frame-4_51 {
+  width: 47.94%;
+  height: 100%;
+  position: absolute;
+  left: 52.06%;
+  right: 0%;
+  top: 0%;
+  bottom: 0%;
+  background-color: rgba(253, 121, 226, 1);
+}
+
+.shadow-blend-4_51-0 {
+  position: absolute;
+  inset: 0;
+  box-shadow: -7px -7px 4px 0px rgba(0, 0, 0, 0.25) inset;
+  pointer-events: none;
+  mix-blend-mode: normal;
+}
+
+.shadow-blend-4_51-1 {
+  position: absolute;
+  inset: 0;
+  box-shadow: 7px 7px 7px 0px rgba(0, 0, 0, 0.25) inset;
+  pointer-events: none;
+  mix-blend-mode: normal;
+}
+
+.Pixso-paragraph-4_9 {
+  font-size: 24px;
+  font-family: "Inconsolata-Regular";
+  font-weight: 400;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: rgba(255, 255, 255, 1);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0%;
+  right: 0%;
+  top: 0%;
+  bottom: 0%;
+}
+
+.Pixso-group-4_20 {
+  width: 96.97%;
+  height: 20.59%;
+  position: absolute;
+  left: 1.38%;
+  right: 1.65%;
+  top: 47.13%;
+  bottom: 32.28%;
+}
+
+.Pixso-frame-4_50 {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0%;
+  right: 0%;
+  top: 0%;
+  bottom: 0%;
+  background-color: rgba(253, 121, 226, 1);
+}
+
+.shadow-blend-4_50-0 {
+  position: absolute;
+  inset: 0;
+  box-shadow: -7px -7px 4px 0px rgba(0, 0, 0, 0.25) inset;
+  pointer-events: none;
+  mix-blend-mode: normal;
+}
+
+.shadow-blend-4_50-1 {
+  position: absolute;
+  inset: 0;
+  box-shadow: 7px 7px 7px 0px rgba(0, 0, 0, 0.25) inset;
+  pointer-events: none;
+  mix-blend-mode: normal;
+}
+
+.Pixso-paragraph-4_1 {
+  font-size: 24px;
+  font-family: "Inconsolata-Regular";
+  font-weight: 400;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: rgba(255, 255, 255, 1);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0%;
+  right: 0%;
+  top: 0%;
+  bottom: 0%;
+}
+
+.Pixso-group-4_19 {
+  width: 96.97%;
+  height: 20.6%;
+  position: absolute;
+  left: 1.38%;
+  right: 1.65%;
+  top: 71.68%;
+  bottom: 7.72%;
+}
+
+.Pixso-frame-4_49 {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0%;
+  right: 0%;
+  top: 0%;
+  bottom: 0%;
+  background-color: rgba(253, 121, 226, 1);
+}
+
+.shadow-blend-4_49-0 {
+  position: absolute;
+  inset: 0;
+  box-shadow: -7px -7px 4px 0px rgba(0, 0, 0, 0.25) inset;
+  pointer-events: none;
+  mix-blend-mode: normal;
+}
+
+.shadow-blend-4_49-1 {
+  position: absolute;
+  inset: 0;
+  box-shadow: 7px 7px 7px 0px rgba(0, 0, 0, 0.25) inset;
+  pointer-events: none;
+  mix-blend-mode: normal;
+}
+
+.Pixso-paragraph-3_17 {
+  font-size: 24px;
+  font-family: "Inconsolata-Regular";
+  font-weight: 400;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0%;
+  right: 0%;
+  top: 0%;
+  bottom: 0%;
+}
+
+
+  </style>
+</head>
+<body>
+<div class="scroll-container">
+  <div id="0_1" class="Pixso-canvas-0_1">
+    <div id="4_36" class="stroke-wrapper-4_36">
+      <div class="Pixso-symbol-4_36">
+        <div id="4_22" class="Pixso-group-4_22">
+          <div id="4_37" class="Pixso-frame-4_37">
+            <div class="shadow-blend-4_37-1"></div>
+            <div class="shadow-blend-4_37-0"></div>
+            <p id="5_1" class="Pixso-paragraph-5_1">Dancews</p>
+          </div>
+        </div>
+        <div id="4_21" class="Pixso-group-4_21">
+          <div id="4_52" class="Pixso-frame-4_52">
+            <div class="shadow-blend-4_52-1"></div>
+            <div class="shadow-blend-4_52-0"></div>
+            <p id="4_8" class="Pixso-paragraph-4_8">Город</p>
+          </div>
+          <div id="4_51" class="Pixso-frame-4_51">
+            <div class="shadow-blend-4_51-1"></div>
+            <div class="shadow-blend-4_51-0"></div>
+            <p id="4_9" class="Pixso-paragraph-4_9">Направление</p>
+          </div>
+        </div>
+        <div id="4_20" class="Pixso-group-4_20">
+          <div id="4_50" class="Pixso-frame-4_50">
+            <div class="shadow-blend-4_50-1"></div>
+            <div class="shadow-blend-4_50-0"></div>
+            <p id="4_1" class="Pixso-paragraph-4_1">Мы искренне благодарим вас за использование нашего сайта. Если вы хотите поделиться своими отзывами и предложениями, то пожалуйста направьте их по указанным ниже контактам</p>
+          </div>
+        </div>
+        <div id="4_19" class="Pixso-group-4_19">
+          <div id="4_49" class="Pixso-frame-4_49">
+            <div class="shadow-blend-4_49-1"></div>
+            <div class="shadow-blend-4_49-0"></div>
+            <p id="3_17" class="Pixso-paragraph-3_17">@вконтакте @мах @телеграм @гугл_таблицы</p>
+          </div>
+        </div>
+      </div>
+      <div class="stroke-4_36"></div>
+    </div>
+  </div>
+</div>
+
+
+<script>
+
+</script>
+
+</body>
+</html>
